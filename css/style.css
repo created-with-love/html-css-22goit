@@ -1,0 +1,97 @@
+/* цвет основного текста #000000 */
+/* акцент #18A0FB*/
+/* вторичный цвет текста rgba(0, 0, 0, 0.8)*/
+
+/* Кастомные CSS-свойста с помощью :root // var - функция CSS, а не JS
+задаем цвета, которые можно будет использовать потом во всех селекторах. Это кастомные css свойста. если вдруг понадобиться сменить цвета на всем файле в один день - можно это будет сделать легко и безболещненно */
+:root {
+  --primary-text-color: rgba(0, 0, 0, 0.8);
+  --title-text-color: #000000;
+  --accent-color: #18a0fb;
+  --primary-bg-color: #ffffff;
+}
+
+color: var(--primary-text-color);
+
+.test-link {
+  color: black;
+}
+
+.test-link:hover,
+.test-link:focus {
+  color: tomato;
+}
+
+.test-link:active {
+  color: teal;
+}
+
+.page {
+  color: #2a2a2a;
+  background-color: var(--primary-bg-color);
+}
+
+.logo {
+  color: var(--title-text-color);
+}
+
+/* хорошая практика - сделать спец класс для сброса списков, что бы при необходимости можно было оставить без форматирования некоторые списки */
+.list {
+  list-style: none;
+}
+
+/* Site nav */
+
+.site-nav .link {
+  color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: #000000;
+}
+
+/* для подстветки текущей страницы в меню шапки*/
+.site-nav .link.current {
+  color: #000000;
+}
+
+/* section */
+.section-title {
+  color: #000000;
+}
+
+/* Hero */
+.hero-title _ {
+  color: #000000;
+}
+
+.feature-list .title {
+  color: #000000;
+}
+
+.feature-list .link {
+  color: var(--accent-color);
+}
+
+/*  Examples */
+
+.work-list .title {
+  color: var(--title-text-color);
+}
+
+/* button */
+.button {
+  color: var(--title-text-color);
+  background-color: var(--primary-bg-color);
+}
+
+.button.primary {
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
+}
+
+.button.secondary {
+  color: var(--accent-color);
+  background-color: var(--primary-bg-color);
+}
