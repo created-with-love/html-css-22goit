@@ -2,9 +2,33 @@
   --primary-text-color: rgba(0, 0, 0, 0.8);
   --title-text-color: #000000;
   --accent-color: #18a0fb;
-  --primary-bg-color: #ffffff;
+  --primary-white-color: #ffffff;
 }
 
-/*
-:root после -- имя идет произвольное
-стили для боди, хедера и футера. Что бы можно было подключать для всех страниц hrml*/
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+}
+
+.logo {
+  color: var(--title-text-color);
+}
+
+.logo:hover {
+  color: var(--accent-color);
+}
+
+/* Site nav */
+
+.site-nav .link {
+  color: var(--accent-color);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--title-text-color);
+}
+
+.site-nav .link.current {
+  color: var(--title-text-color);
+}
